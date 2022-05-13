@@ -1,0 +1,178 @@
+body {
+  font-family: $montserrat;
+  color: rgba($black, 0.8);
+  background-color: $bg-gray;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+
+  @include mobile-large {
+    font-size: 14px;
+  }
+}
+
+.default-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.link-decor-on-hover {
+  transition: text-decoration .3s ease;
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+.d-block {
+  display: block;
+}
+
+@include mobile-large {
+  .d-sm-block {
+    display: block;
+  }
+}
+
+
+.text-white {
+  color: rgba(#fff, 0.8) !important;
+
+}
+
+.text-blue {
+  color: $blue !important;
+}
+.text-green {
+  color: $green !important;
+}
+
+.text-black {
+  color: $black !important;
+}
+
+.text-grey {
+  color: $text-grey !important;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+.text-camel {
+  text-transform: capitalize;
+}
+.ff-balsamic {
+  font-family: $balsamiq-sans;
+}
+.ff-nunito {
+  font-family: $nunito;
+}
+.fz-15 {
+  font-size: 15px !important;
+}
+.fw-700 {
+  font-weight: 700 !important;
+}
+.fw-500 {
+  font-weight: 500 !important;
+}
+.pos-relative {
+  position: relative;
+}
+.pos-absolute {
+  position: absolute;
+}
+.d-none {
+  display: none;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.w-90 {
+  width: 90% !important;
+}
+strong {
+  font-weight: bold;
+}
+.text-center {
+  text-align: center;
+}
+@include tablet {
+  .text-md-center {
+    text-align: center;
+  }
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+@include tablet {
+  .text-md-left {
+    text-align: left;
+  }
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+@include mobile-large {
+  .mx-sm-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 30px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.btn--green {
+  background-color: green;
+  color: #fff;
+
+  &:hover {
+    background-color: transparent;
+    border-color: green;
+    color: $black;
+  }
+}
+
+

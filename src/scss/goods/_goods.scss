@@ -1,0 +1,14 @@
+.goods {
+
+  @include tablet {
+    .col-md-6:not(:nth-child(-n+2)) {
+      margin-top: 40px;
+    }
+  }
+
+  @include mobile-large {
+    .col-sm-12:not(:nth-child(-n+1)) {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.card {
+  $root: &;
+
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 6px 10px 0 rgba(34, 60, 80, 0.2);
+  padding: 12px 20px;
+
+  &--active {
+    position: relative;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: -8px;
+      bottom: -8px;
+      left: -8px;
+      right: -8px;
+      width: 105%;
+      height: 105%;
+      background-color: transparent;
+      z-index: -1;
+      box-shadow: 0 0 0 4px red;
+    }
+
+    #{$root} {
+      &__code {
+        display: block;
+      }
+
+      &__action {
+        display: flex;
+      }
+    }
+  }
+
+  &__code {
+    display: none;
+    padding: 8px 0 14px 0;
+  }
+
+  &__img {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+    transition: transform .2s ease-in-out;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__discounts-label {
+    color: #fff;
+    padding: 4px 8px;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 2px;
+
+    & + & {
+      margin-left: 4px;
+    }
+
+    &--red {
+      background-color: $red;
+    }
+
+    &--green {
+      background-color: green;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: blue;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 8px 0;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    padding: 8px 0;
+  }
+
+  &__info-rating {
+    i {
+      font-size: 10px;
+      padding: 0 2px;
+    }
+  }
+
+  &__pricing-label {
+    font-size: 12px;
+  }
+
+  &__price {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__price-value {
+    color: $red;
+    font-size: 24px;
+    margin-right: 12px;
+  }
+
+  &__price-cashback {
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 4px;
+    background-color: #fbdb65;
+    border-radius: 2px;
+    color: #000;
+  }
+  
+  &__old-price {
+    text-decoration: line-through;
+  }
+
+  &__action {
+    display: none;
+
+    i {
+      font-size: 22px;
+      padding: 4px;
+      cursor: pointer;
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        color: $red;
+      }
+
+      & + i {
+        margin-left: 8px;
+      }
+    }
+  }
+}
